@@ -1,8 +1,8 @@
 {
-    "name": "webridge/framework-standard-edition",
+    "name": "webridge/symfony-standard-edition-hacklang-hhvm",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution customized for WeBridge needs",
+    "description": "Symfony standard edition made to run with vagrant and HHVM + Hack",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
@@ -37,6 +37,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "bash contrib/setup.sh"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
