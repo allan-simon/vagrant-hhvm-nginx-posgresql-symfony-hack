@@ -1,0 +1,5 @@
+smg_bundle_test:
+    resource: "@SMGBundleTestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

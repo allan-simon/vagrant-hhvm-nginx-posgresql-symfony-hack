@@ -1,0 +1,13 @@
+parameters:
+    database_driver: pdo_pgsql
+    database_host: 127.0.0.1
+    database_port: '5432'
+    database_name: hhvm_db
+    database_user: hhvm
+    database_password: hhvm
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: ae4f49befc969ff5feada55bcc88e3c0

@@ -1,0 +1,6 @@
+composer.phar
+vendor/
+bin/
+app/logs
+app/cache
+.vagrant/
