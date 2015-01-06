@@ -3,7 +3,6 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
-  config.vm.box_url = "~/Downloads/trusty-server-cloudimg-amd64-vagrant-disk1(1).tar.gz"
   config.vm.provision :shell, :inline => <<-END
     export PROJECT_NAME="hhvm"
     export DBUSER=$PROJECT_NAME
