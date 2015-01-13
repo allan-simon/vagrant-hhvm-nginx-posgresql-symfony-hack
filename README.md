@@ -54,14 +54,14 @@ A middle sized project is supposed to be made of several bundles
 if not, you're certainly doing something wrong (too much coupling etc.)
 
 ```
-php app/console generate:bundle --namespace=%PROJECT_NAME%/Bundle/%XXX%Bundle --no-interaction --format=yml
+php app/console generate:bundle --namespace=%PROJECT_NAME%/%XXX%Bundle --no-interaction --format=yml --dir=src
 ```
 
 replace `%PROJECT_NAME%` and `%XXX%` by the project name and the name of the feature
 your bundle is covering for example
 
 ```
-php app/console generate:bundle --namespace=WeBridge/Bundle/VideoBundle --no-interaction --format=yml
+php app/console generate:bundle --namespace=WeBridge/VideoBundle --no-interaction --format=yml
 ```
 
 once it's done don't forget to replace the `<?php` in the controller by a `<?hh` so that you can leverage

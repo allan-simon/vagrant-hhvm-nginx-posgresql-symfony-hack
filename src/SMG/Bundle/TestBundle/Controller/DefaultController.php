@@ -19,7 +19,6 @@ class DefaultController extends Controller
      */
     public function indexAction(string $name) : IndexShape
     {
-        var_dump(get_loaded_extensions());
         return shape('name' => $name);
     }
 }
