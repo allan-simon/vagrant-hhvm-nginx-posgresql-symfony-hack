@@ -29,7 +29,7 @@ hhvm.libxml.ext_entity_whitelist = file,http
 hhvm.dynamic_extensions.pdo_pgsql = /usr/lib/hhvm/pgsql.so
 hhvm.dynamic_extension_path = /usr/lib/hhvm
 _EOF
-  cp /vagrant/provisioning/pgsql.so -O /usr/lib/hhvm/pgsql.so
+  cp /vagrant/provisioning/pgsql.so /usr/lib/hhvm/pgsql.so
   chmod +x /usr/lib/hhvm/pgsql.so
 
   sudo service hhvm restart
