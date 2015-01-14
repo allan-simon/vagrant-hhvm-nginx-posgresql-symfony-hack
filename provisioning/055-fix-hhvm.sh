@@ -2,10 +2,10 @@
 STAMP="/home/vagrant/.$(basename $0)"
 echo $STAMP
 if [ ! -f $STAMP ]; then
-    #ln -s /usr/bin/hhvm '/usr/bin/hhvm --php'
+    ln -s /usr/bin/hhvm '/usr/bin/hhvm --php'
     
-    #echo "LC_ALL=C" >> /etc/environment
-    #export LC_ALL=C
+    echo "LC_ALL=C" >> /etc/environment
+    export LC_ALL=C
 
     sudo cat << _EOF > /etc/hhvm/php.ini
 ; php options
@@ -26,8 +26,8 @@ hhvm.http.slow_query_threshold = 30000
 ; https://github.com/facebook/hhvm/issues/3751
 hhvm.libxml.ext_entity_whitelist = file,http
 ; load pgsql module
-hhvm.dynamic_extensions.pdo_pgsql = /usr/lib/hhvm/pgsql.so
 hhvm.dynamic_extension_path = /usr/lib/hhvm
+hhvm.dynamic_extensions[pgsql] = pgsql.so
 _EOF
   cp /vagrant/provisioning/pgsql.so /usr/lib/hhvm/pgsql.so
   chmod +x /usr/lib/hhvm/pgsql.so
