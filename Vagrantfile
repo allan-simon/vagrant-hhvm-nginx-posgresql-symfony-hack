@@ -3,6 +3,12 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
+
+  # Binding mounts for folders with dynamic data in them
+  # This must happen before provisioning, and on every subsequent reboot, hence run: "always"
+  config.vm.provision "shell",
+        inline: "/vagrant/provisioning/bind-mount.sh",
+        run: "always"
   config.vm.provision :shell, :inline => <<-END
     export PROJECT_NAME="hhvm"
     export DBUSER=$PROJECT_NAME
