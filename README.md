@@ -7,7 +7,7 @@ already explained here
 if something is wrong or missing: tell me, if you don't tell me
 I have no way to improve it =)
 
-Note: you must have a 64 bit machine/OS to use this
+Note: you must have a 64 bit machine/OS to use this and nfs install
 
   * we use `vagrant` to create the dev environnement
   * `nginx` to provide the web server
@@ -18,6 +18,11 @@ Note: you must have a 64 bit machine/OS to use this
   * `Hack` as the language to write our own safer code
 
 
+for windows user you can have a nfs using this plugin
+
+```
+vagrant plugin install vagrant-winnfsd
+```
 
 # Create the vagrant machine
 
