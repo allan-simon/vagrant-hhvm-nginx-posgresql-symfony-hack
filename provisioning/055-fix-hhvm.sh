@@ -13,6 +13,7 @@ session.save_handler = files
 session.save_path = /var/lib/php5
 session.gc_maxlifetime = 1440
 date.timezone = UTC
+session.save_path = /tmp
 
 ; hhvm specific 
 hhvm.log.level = Warning
