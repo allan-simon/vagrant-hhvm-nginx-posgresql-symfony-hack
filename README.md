@@ -8,6 +8,8 @@ if something is wrong or missing: tell me, if you don't tell me
 I have no way to improve it =)
 
 Note: you must have a 64 bit machine/OS to use this and nfs install
+This VM does not have the typical problem of Symfony2 being slow on
+vagrant.
 
   * we use `vagrant` to create the dev environnement
   * `nginx` to provide the web server
