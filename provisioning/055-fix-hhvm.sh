@@ -33,6 +33,7 @@ _EOF
   cp /vagrant/provisioning/pgsql.so /usr/lib/hhvm/pgsql.so
   chmod +x /usr/lib/hhvm/pgsql.so
 
+  sudo update-rc.d hhvm defaults
   sudo service hhvm restart
 
   touch $STAMP
